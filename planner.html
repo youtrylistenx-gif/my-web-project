@@ -653,11 +653,15 @@
       border-top: 1px solid #1a1a1a;
       box-shadow: 0 -4px 20px rgba(0,0,0,0.35);
       z-index: 9000;
-      padding: 10px 16px;
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+    .float-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 10px 24px;
       display: flex;
       align-items: center;
       gap: 12px;
-      padding-bottom: calc(10px + env(safe-area-inset-bottom));
     }
     .float-left {
       display: flex;
@@ -734,7 +738,7 @@
       animation: none;
     }
     @media (max-width: 420px) {
-      #float-cta-bar { padding: 8px 12px; gap: 8px; }
+      .float-inner { padding: 8px 12px; gap: 8px; }
       .float-price-new { font-size: 1.15rem; }
       .float-discount { font-size: 0.7rem; padding: 2px 6px; }
       .float-btn { padding: 9px 14px; }
@@ -1002,18 +1006,20 @@
 
 <!-- ── FLOATING BUY BUTTON (TikTok style) ── -->
 <div id="float-cta-bar">
-  <div class="float-left">
-    <div class="float-price-row">
-      <span class="float-discount">-33.9%</span>
-      <span class="float-price-new">฿390.-</span>
-      <span class="float-price-old">฿590.-</span>
+  <div class="float-inner">
+    <div class="float-left">
+      <div class="float-price-row">
+        <span class="float-discount">-33.9%</span>
+        <span class="float-price-new">฿390.-</span>
+        <span class="float-price-old">฿590.-</span>
+      </div>
+      <div class="float-timer" id="float-flash-sale-text">⚡ กำลังโหลด...</div>
     </div>
-    <div class="float-timer" id="float-flash-sale-text">⚡ กำลังโหลด...</div>
+    <a class="float-btn" href="checkout.html">
+      <span class="float-btn-top">🔥 รับสิทธิ์ราคาพิเศษเลย</span>
+      <span class="float-btn-sub">✅ ชำระเงินเสร็จแล้ว ได้รับทางอีเมลทันที</span>
+    </a>
   </div>
-  <a class="float-btn" href="checkout.html">
-    <span class="float-btn-top">🔥 รับสิทธิ์ราคาพิเศษเลย</span>
-    <span class="float-btn-sub">✅ ชำระเงินเสร็จแล้ว ได้รับทางอีเมลทันที</span>
-  </a>
 </div>
  
 <script>
