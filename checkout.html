@@ -420,12 +420,15 @@
       <div class="account-details">
         <span class="acc-num">061-927-3586</span>
         <span class="acc-name">ชื่อบัญชี: นายผัด ตีวัน</span>
+        <button class="btn-copy" onclick="copyText('0619273586', 'คัดลอกเบอร์พร้อมเพย์แล้วครับ 🎉')">
+          📋 คัดลอกเลขพร้อมเพย์
+        </button>
         <div class="qr-container">
           <img src="./ภาพ/QR.png" class="qr-img" alt="QR Code">
+          <button class="btn-copy" onclick="downloadQR()" style="margin-top:12px;">
+            💾 ดาวน์โหลด QR Code
+          </button>
         </div>
-        <button class="btn-copy" onclick="copyText('0619273586', 'คัดลอกเบอร์พร้อมเพย์แล้วครับ 🎉')">
-          📋 แคปหน้าจอ QR ไปสแกน หรือกดตรงนี้เพื่อคัดลอกเลขพร้อมเพย์ได้เลยครับ 🥰
-        </button>
       </div>
     </div>
 
@@ -510,6 +513,23 @@
     document.execCommand("copy");
     document.body.removeChild(el);
     alert(msg);
+  }
+
+  async function downloadQR() {
+    try {
+      const response = await fetch("./ภาพ/QR.png");
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "QR-PromptPay-มึงลองฟัง.png";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    } catch (err) {
+      alert("ดาวน์โหลดไม่สำเร็จ กรุณาแคปหน้าจอหรือบันทึกภาพด้วยตัวเองครับ 🙏");
+    }
   }
 
   function previewFile(input) {
