@@ -11,10 +11,12 @@
   
   <style>
     /* ── RESET STYLE ── */
-    *, *::before, *::after { 
-      box-sizing: border-box; 
-      margin: 0; 
-      padding: 0; 
+    html { scroll-behavior: smooth; }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
     
     body { 
@@ -1075,7 +1077,9 @@
         <span class="flash-sale-badge" id="flash-sale-text">⚡ กำลังโหลด...</span>
       </div>
       <div class="stats-row">
-        <span>⭐ 5 (99+ รีวิวจากผู้ใช้จริง)</span>
+        <a href="#reviews-section" style="display:inline-flex;align-items:center;gap:5px;text-decoration:none;color:#5f6368;border-bottom:1px dashed #bbb;padding-bottom:1px;cursor:pointer;">
+          ⭐ 5 (99+ รีวิวจากผู้ใช้จริง) <span style="color:#1a73e8;font-size:0.82rem;font-weight:600;">↓ คลิกเพื่อดูรีวิว</span>
+        </a>
         <span style="color:#dadce0;">|</span>
         <span style="display:inline-flex; align-items:center; gap:8px; white-space:nowrap;">
           <span class="live-dot"></span>
@@ -1128,7 +1132,7 @@
       </div>
     </div>
  
-    <div class="reviews-section" style="margin-top:20px; padding-top:20px; border-top:1px solid #030303;">
+    <div id="reviews-section" class="reviews-section" style="margin-top:20px; padding-top:20px; border-top:1px solid #030303;">
       <p class="review-heading">รีวิวจากผู้ใช้งานจริง</p>
       <div class="review-stars" style="color: #000000;">5/5 ⭐⭐⭐⭐⭐ (99+ รีวิว)</div>
     </div>
