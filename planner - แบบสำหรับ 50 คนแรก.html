@@ -527,13 +527,14 @@
       justify-content: space-between;
       align-items: center;
       font-size: 0.85rem;
-      color: #5f6368;
+      color: #202124;
+      font-weight: 700;
       margin-bottom: 6px;
       flex-wrap: wrap;
       gap: 4px;
     }
     .slots-label strong {
-      color: #d32f2f;
+      color: #202124;
     }
     .slots-bar {
       width: 100%;
@@ -821,6 +822,11 @@
       margin-top: 32px; 
     }
  
+    /* ── DESKTOP ONLY: เพิ่ม font-size +1px (ไม่กระทบมือถือ/iPad) ── */
+    @media (min-width: 1025px) {
+      html { font-size: 17px; }
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       .review-masonry { column-count: 2; column-gap: 10px; }
@@ -1116,12 +1122,12 @@
         <span class="price-discount">-73.8%</span>
         <span class="price-new">฿390.-</span>
         <span class="price-old">฿1,490.-</span>
-        <span class="flash-sale-badge" id="slots-badge">🔥 เหลือ 5 สิทธิ์สุดท้าย!</span>
+        <span class="flash-sale-badge" id="slots-badge">🔥 เหลือ 10 สิทธิ์สุดท้าย!</span>
       </div>
-      <div class="slots-wrap" id="slots-wrap" data-used="45" data-total="50">
+      <div class="slots-wrap" id="slots-wrap" data-used="10" data-total="20">
         <div class="slots-label">
-          <span>ราคานี้สำหรับ <strong id="slots-total-label">50 คน</strong>แรกจากคลิปล่าสุดเท่านั้น — จองแล้ว <span id="slots-count-label">45/50</span> คน</span>
-          <span id="slots-remaining-label" style="color:#d32f2f; font-weight:700;">เหลือ 5 ที่ สุดท้ายแล้ว!</span>
+          <span>ราคานี้สำหรับ <strong id="slots-total-label">20 คน</strong>แรกจากคลิปล่าสุดเท่านั้น — จองแล้ว <span id="slots-count-label">10/20</span> คน</span>
+          <span id="slots-remaining-label" style="color:#d32f2f; font-weight:700;">เหลือ 10 ที่ สุดท้ายแล้ว!</span>
         </div>
         <div class="slots-bar">
           <div class="slots-bar-fill" id="slots-bar-fill"></div>
@@ -1141,7 +1147,7 @@
 
     <a class="btn-main" href="checkout.html">
       <span class="btn-main-top">🔥 รับสิทธิ์ราคาพิเศษ ฿390.- เลย</span>
-      <span class="btn-main-sub">⚠️ เหลือเพียง 5 สิทธิ์สุดท้ายเท่านั้น — ชำระเงินแล้วได้รับทันที</span>
+      <span class="btn-main-sub">⚠️ เหลือเพียง 10 สิทธิ์สุดท้ายเท่านั้น — ชำระเงินแล้วได้รับทันที</span>
     </a>
  
 
