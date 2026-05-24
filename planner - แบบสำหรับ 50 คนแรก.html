@@ -11,10 +11,12 @@
   
   <style>
     /* ── RESET STYLE ── */
-    *, *::before, *::after { 
-      box-sizing: border-box; 
-      margin: 0; 
-      padding: 0; 
+    html { scroll-behavior: smooth; }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
     
     body { 
@@ -515,6 +517,48 @@
       font-size: 0.85rem;
       font-weight: 700;
       border: 1px solid #ffcdd2;
+    }
+
+    .slots-wrap {
+      margin-top: 12px;
+    }
+    .slots-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: #5f6368;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .slots-label strong {
+      color: #d32f2f;
+    }
+    .slots-bar {
+      width: 100%;
+      height: 10px;
+      background: #f1f3f4;
+      border-radius: 99px;
+      overflow: hidden;
+    }
+    .slots-bar-fill {
+      height: 100%;
+      width: 90%;
+      background: linear-gradient(90deg, #f44336, #b71c1c);
+      border-radius: 99px;
+      position: relative;
+    }
+    .slots-bar-fill::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 30px;
+      background: rgba(255,255,255,0.25);
+      border-radius: 99px;
+      animation: pulse 1.6s ease-out infinite;
     }
     
     .product-title { 
@@ -1072,21 +1116,32 @@
         <span class="price-discount">-73.8%</span>
         <span class="price-new">฿390.-</span>
         <span class="price-old">฿1,490.-</span>
-        <span class="flash-sale-badge" id="flash-sale-text">⚡ กำลังโหลด...</span>
+        <span class="flash-sale-badge" id="slots-badge">🔥 เหลือ 5 สิทธิ์สุดท้าย!</span>
       </div>
-      <div class="stats-row">
-        <span>⭐ 5 (99+ รีวิวจากผู้ใช้จริง)</span>
+      <div class="slots-wrap" id="slots-wrap" data-used="45" data-total="50">
+        <div class="slots-label">
+          <span>ราคานี้สำหรับ <strong id="slots-total-label">50 คน</strong>แรกจากคลิปล่าสุดเท่านั้น — จองแล้ว <span id="slots-count-label">45/50</span> คน</span>
+          <span id="slots-remaining-label" style="color:#d32f2f; font-weight:700;">เหลือ 5 ที่ สุดท้ายแล้ว!</span>
+        </div>
+        <div class="slots-bar">
+          <div class="slots-bar-fill" id="slots-bar-fill"></div>
+        </div>
+      </div>
+      <div class="stats-row" style="margin-top:12px;">
+        <a href="#reviews-section" style="display:inline-flex;align-items:center;gap:5px;text-decoration:none;color:#5f6368;border-bottom:1px dashed #bbb;padding-bottom:1px;cursor:pointer;">
+          ⭐ 5 (99+ รีวิวจากผู้ใช้จริง) <span style="color:#1a73e8;font-size:0.82rem;font-weight:600;border:none;border-bottom:none;">↓ คลิกเพื่อดูรีวิว</span>
+        </a>
         <span style="color:#dadce0;">|</span>
         <span style="display:inline-flex; align-items:center; gap:8px; white-space:nowrap;">
           <span class="live-dot"></span>
-          <span>จำนวนผู้ใช้งานตอนนี้ 783 คน</span>
+          <span>จำนวนผู้ใช้งานตอนนี้ 789 คน</span>
         </span>
       </div>
     </div>
 
     <a class="btn-main" href="checkout.html">
-      <span class="btn-main-top">🔥 คลิกเพื่อรับสิทธิราคาพิเศษ ฿390.- เลย</span>
-      <span class="btn-main-sub">✅ ชำระเงินเสร็จแล้ว ได้รับทุกอย่างทาง Email ทันที</span>
+      <span class="btn-main-top">🔥 รับสิทธิ์ราคาพิเศษ ฿390.- เลย</span>
+      <span class="btn-main-sub">⚠️ เหลือเพียง 5 สิทธิ์สุดท้ายเท่านั้น — ชำระเงินแล้วได้รับทันที</span>
     </a>
  
 
@@ -1128,7 +1183,7 @@
       </div>
     </div>
  
-    <div class="reviews-section" style="margin-top:20px; padding-top:20px; border-top:1px solid #030303;">
+    <div id="reviews-section" class="reviews-section" style="margin-top:20px; padding-top:20px; border-top:1px solid #030303;">
       <p class="review-heading">รีวิวจากผู้ใช้งานจริง</p>
       <div class="review-stars" style="color: #000000;">5/5 ⭐⭐⭐⭐⭐ (99+ รีวิว)</div>
     </div>
@@ -1182,26 +1237,21 @@
 <footer class="gs-footer">มึงลองฟัง.❤️‍🔥</footer>
 
 <script>
-  /* ── FLASH SALE TIMER ── */
-  function updateTimer() {
-    const now = new Date();
-    let target = new Date();
-    target.setHours(18, 0, 0, 0); 
-    if (now > target) target.setDate(target.getDate() + 1);
-    
-    const diff = target - now;
-    const h = Math.floor(diff / 3600000);
-    const m = Math.floor((diff % 3600000) / 60000);
-    const s = Math.floor((diff % 60000) / 1000);
-    
-    const el = document.getElementById("flash-sale-text");
-    if(el) {
-        el.innerHTML = `แฟลชเซล⚡${h} : ${m} : ${s}`;
-    }
-  }
-  setInterval(updateTimer, 1000);
-  updateTimer();
+  /* ── SLOTS COUNTER (แก้แค่ data-used และ data-total ด้านบน) ── */
+  (function() {
+    const wrap = document.getElementById('slots-wrap');
+    if (!wrap) return;
+    const used  = parseInt(wrap.dataset.used);
+    const total = parseInt(wrap.dataset.total);
+    const remaining = total - used;
+    const pct = Math.min(100, Math.round(used / total * 100));
 
+    document.getElementById('slots-bar-fill').style.width = pct + '%';
+    document.getElementById('slots-count-label').textContent = used + '/' + total;
+    document.getElementById('slots-total-label').textContent = total + ' คน';
+    document.getElementById('slots-remaining-label').textContent = 'เหลือ ' + remaining + ' ที่ สุดท้ายแล้ว!';
+    document.getElementById('slots-badge').textContent = '🔥 เหลือ ' + remaining + ' สิทธิ์สุดท้าย!';
+  })();
 
   /* ── LIVE USERS POPUP (5 SEC INTERVAL) ── */
   function showUserPopup() {
