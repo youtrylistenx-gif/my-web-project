@@ -252,7 +252,7 @@
     .btn-submit {
       width: 100%;
       padding: 18px;
-      background: #188038;
+      background: #43a047;
       color: #fff;
       border: none;
       border-radius: 14px;
@@ -262,12 +262,12 @@
       margin: 24px 0 50px;
       cursor: pointer;
       transition: background 0.2s, transform 0.1s;
-      box-shadow: 0 4px 12px rgba(24,128,56,0.3);
+      box-shadow: 0 4px 12px rgba(67,160,71,0.3);
     }
-    .btn-submit:hover { background: #137333; }
+    .btn-submit:hover { background: #388e3c; }
     .btn-submit:active { transform: scale(0.99); }
     .btn-loading {
-      background: #5bb974 !important;
+      background: #81c784 !important;
       cursor: not-allowed !important;
       animation: btnPulse 1.5s infinite;
     }
@@ -474,21 +474,17 @@
       </button>
 
    </div></div></div><script>
-  /* Flash Sale Timer (ตั้งเวลา 6 โมงเช้าทุกวัน) */
+  /* Flash Sale Timer (วนลูปทุก 1 ชั่วโมง) */
   function updateTimer() {
     const now = new Date();
-    let target = new Date();
-    target.setHours(1, 0, 0, 0); 
-    if (now > target) target.setDate(target.getDate() + 1);
-    
-    const diff = target - now;
-    const h = Math.floor(diff / 3600000);
-    const m = Math.floor((diff % 3600000) / 60000);
+    const msInHour = 3600000;
+    const diff = msInHour - (now.getTime() % msInHour);
+    const m = Math.floor((diff % msInHour) / 60000);
     const s = Math.floor((diff % 60000) / 1000);
-    
+
     const el = document.getElementById("flash-sale-text");
     if(el) {
-        el.innerHTML = `แฟลชเซล⚡ ${h} : ${m} : ${s}`;
+        el.innerHTML = `แฟลชเซล⚡0 : ${String(m).padStart(2,'0')} : ${String(s).padStart(2,'0')}`;
     }
   }
   setInterval(updateTimer, 1000);
