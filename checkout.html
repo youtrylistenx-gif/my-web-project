@@ -489,15 +489,6 @@
 <script src="price-config.js"></script><script>
   applyPriceConfig();
 
-  /* Live Users Popup */
-  function showUserPopup() {
-    const popup = document.getElementById('live-users-popup');
-    document.getElementById('user-count').innerText = Math.floor(Math.random() * (30 - 10 + 1)) + 10;
-    popup.style.display = 'block';
-    setTimeout(() => { popup.style.display = 'none'; }, 3000);
-  }
-  setInterval(showUserPopup, 6000);
-
   const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxpHsI2MQNL05GSv-b5Q1_CNNY4QYbwhaHnNkV0k5iPhC4S0b8IkreWkMrL2BgTLKYMOQ/exec";
 
   function copyText(text, msg) {
@@ -624,5 +615,6 @@
     reader.readAsDataURL(fileInput.files[0]);
   }
 </script>
+<script src="live-users.js"></script>
 </body>
 </html>

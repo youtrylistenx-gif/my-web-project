@@ -314,14 +314,7 @@
       } catch(e) {}
     })();
 
-    /* Live Users Popup */
-    function showUserPopup() {
-      const popup = document.getElementById('live-users-popup');
-      document.getElementById('user-count').innerText = Math.floor(Math.random() * (30 - 10 + 1)) + 10;
-      popup.style.display = 'block';
-      setTimeout(() => { popup.style.display = 'none'; }, 3000);
-    }
-    setInterval(showUserPopup, 6000);
   </script>
+  <script src="live-users.js"></script>
 </body>
 </html>

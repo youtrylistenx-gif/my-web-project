@@ -1376,15 +1376,6 @@
   updateTimer();
 
 
-  /* ── LIVE USERS POPUP (5 SEC INTERVAL) ── */
-  function showUserPopup() {
-    const popup = document.getElementById('live-users-popup');
-    document.getElementById('user-count').innerText = Math.floor(Math.random() * (30 - 10 + 1)) + 10;
-    popup.style.display = 'block';
-    setTimeout(() => { popup.style.display = 'none'; }, 3000);
-  }
-  setInterval(showUserPopup, 6000);
-
   /* ── CAROUSEL LOGIC ── */
   const track = document.getElementById("carouselTrack");
   const dotsWrap = document.getElementById("carouselDots");
@@ -1443,8 +1434,9 @@
     const [tid, bid] = s.split("|"); 
     const t = document.getElementById(tid);
     const b = document.getElementById(bid); 
-    t.onclick = () => { b.classList.toggle("open"); t.classList.toggle("open"); }; 
+    t.onclick = () => { b.classList.toggle("open"); t.classList.toggle("open"); };
   });
 </script>
+<script src="live-users.js"></script>
 </body>
 </html>
