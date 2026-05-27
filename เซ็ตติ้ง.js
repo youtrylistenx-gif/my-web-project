@@ -60,7 +60,7 @@ var SHOW_WHY_SECTION = false;
    true  → แสดงชื่อใต้โลโก้ทุกหน้า
    false → ซ่อนชื่อ  (ไอคอนโลโก้ยังแสดงอยู่ แค่ซ่อนตัวหนังสือ)  */
 
-var LOGO_NAME_ENABLED = true;
+var LOGO_NAME_ENABLED = false;
 
 
 /* ┌──────────────────────────────────────────────────────────────┐
