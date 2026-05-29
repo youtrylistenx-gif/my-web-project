@@ -113,8 +113,8 @@ function applyPriceConfig(cfg) {
   var pNew = '฿' + c.priceNew + '.-';
   var pOld = '฿' + c.priceOld.toLocaleString() + '.-';
   var disc = calcDiscount(c.priceNew, c.priceOld);
-  var sT   = c.slotsTotal || 50;
-  var sU   = c.slotsUsed  || 45;
+  var sT   = c.slotsTotal || 10;
+  var sU   = c.slotsUsed  || 5;
   var left = sT - sU;
   var pct  = Math.min(100, Math.round(sU / sT * 100));
 
