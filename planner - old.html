@@ -1185,7 +1185,7 @@
     .carousel-summary-row {
       display: flex;
       gap: 20px;
-      align-items: stretch;
+      align-items: flex-start;
       margin-top: 20px;
     }
     .carousel-col {
@@ -1194,6 +1194,7 @@
     }
     .summary-col {
       flex: 0 0 calc(40% - 10px);
+      overflow: hidden;
       min-width: 0;
     }
 
@@ -1283,7 +1284,7 @@
           <span style="color:#dadce0;">|</span>
           <span style="display:inline-flex;align-items:center;gap:8px;white-space:nowrap;">
             <span class="live-dot"></span>
-            <span>จำนวนผู้ใช้งานระบบตอนนี้ 793 คน</span>
+            <span>จำนวนผู้ใช้งานระบบตอนนี้ 798 คน</span>
           </span>
         </div>
       </div>
@@ -1340,7 +1341,7 @@
             </div>
             <div class="slide-body">
               <div class="slide-title">📈 Planner — วางแผน ติดตามความคืบหน้าของงานและเป้าหมาย</div>
-              <div class="slide-desc">   จากชีวิตที่ยุ่งเหยิง กลายเป็นชีวิตที่มีระเบียบแบบแผน ได้เวลาว่างในชีวิตกลับมา มีกราฟคอยติดตามความคืบหน้าของทุกเรื่องแบบ Real Time "เวลาที่เห็นชีวิตเรามีแผน มีกราฟที่ว่างานและเป้าหมายของเราใกล้จะสำเร็จมากขึ้นเรื่อยๆ มันทำให้รู้สึกดีมากๆ เลยครับ☺️"</div>
+              <div class="slide-desc">   จากชีวิตที่ยุ่งเหยิง กลายเป็นชีวิตที่มีระเบียบแบบแผน ได้เวลาว่างในชีวิตกลับมา มีกราฟคอยติดตามความคืบหน้าของทุกเรื่องแบบขยับให้เห็นทันทีทุกครั้งที่ติ๊ก "เวลาที่เห็นชีวิตเรามีแผน มีกราฟที่ว่างานและเป้าหมายของเราใกล้จะสำเร็จมากขึ้นเรื่อยๆ มันทำให้รู้สึกดีมากๆ เลยครับ☺️"</div>
             </div>
           </div>
 
@@ -1364,7 +1365,7 @@
             </div>
             <div class="slide-body">
               <div class="slide-title">💰 Money Tracker — บริหารเงิน</div>
-              <div class="slide-desc">   ช่วงที่ผมเริ่มมีรายได้และมีเงินก้อนนึงเข้ามา มันทำให้ผมรู้ทันทีว่า...ถ้าไม่มีระบบบริหารเงินที่ดี สุดท้ายชีวิตผมคงกลับไปเครียดกับเรื่องการเงินเหมือนเดิมแน่ๆ ระบบนี้ผมเลยพึ่งทำเพิ่มขึ้นมาเสริม เพื่อช่วยบริหารการเงินของทุกคนในหน้าเดียว "เห็นเงินที่เข้ามา เห็นเงินที่ออกไป เห็นเงินที่เหลือ และเห็นสิ่งที่ทำให้การเงินเราพัง" พอเรามีตัวช่วยคอยเตือน ก็จะสบายใจและพร้อมเติบโตได้อย่างมั่นใจ ไปพร้อมกับเรื่องอื่นๆ ในชีวิตครับ 💵✨</div>
+              <div class="slide-desc">   ช่วงที่ผมเริ่มมีรายได้และมีเงินก้อนนึงเข้ามา มันทำให้ผมรู้ทันทีว่า...ถ้าไม่มีระบบบริหารเงินที่ดี สุดท้ายชีวิตผมคงกลับไปเครียดกับเรื่องการเงินเหมือนเดิมแน่ๆ ระบบนี้ผมทำเพิ่มขึ้นมาเสริม เพื่อช่วยบริหารการเงินของทุกคนในหน้าเดียว "เห็นเงินที่เข้ามา เห็นเงินที่ออกไป เห็นเงินที่เหลือ และเห็นสิ่งที่ทำให้การเงินเราพัง" พอเรามีตัวช่วยคอยเตือน ก็จะสบายใจและพร้อมเติบโตได้อย่างมั่นใจ ไปพร้อมกับเรื่องอื่นๆ ในชีวิตครับ 💵✨</div>
             </div>
           </div>
 
@@ -1377,7 +1378,7 @@
             </div>
             <div class="slide-body">
               <div class="slide-title">📊 สรุปรายปี — เห็นพัฒนาการทุกเรื่องของทั้งปีในหน้าเดียว</div>
-              <div class="slide-desc">    หน้าสรุปภาพรวมทั้งปี รวมทุกด้านไว้ในที่เดียว ทั้งเป้าหมาย วินัย และการเงิน เพื่อให้เเห็นว่าปีนี้เราเติบโตไปแค่ไหน ีอะไรต้องปรับปรุง เพื่อทบทวนและวางแผนปีหน้าได้ดียิ่งขึ้นอีกครับ🥰📈</div>
+              <div class="slide-desc">    "ผมเคยผ่านปีนึงมาแล้วรู้สึกว่า...ทำอะไรไปเยอะมากเลย แต่ไม่รู้เลยว่าตัวเองโตขึ้นจริงๆ มั้ย หน้านี้เลยเกิดขึ้นมาครับ เพื่อให้เห็นภาพรวมของทั้งปีในที่เดียว ทั้งเป้าหมาย วินัย และการเงิน ว่าปีนี้เราเติบโตไปแค่ไหน อะไรดีแล้ว อะไรต้องปรับ เพื่อให้ปีหน้าดีกว่าเดิมครับ🥰📈"</div>
             </div>
           </div>
 
@@ -1402,7 +1403,7 @@
             </div>
             <div class="slide-body">
               <div class="slide-title">🔄 อัปเดตฟรีตลอดชีพ — ได้ทุกระบบใหม่โดยที่ไม่ต้องเสียเงินเพิ่มแม้แต่บาทเดียว</div>
-              <div class="slide-desc">   ผมตั้งใจทำระบบนี้ให้ดีที่สุด และจะคอยปรับปรุงรายละเอียดเล็กๆ น้อยๆ ให้ใช้งานง่ายขึ้นอยู่เสมอตามฟีดแบ็กของทุกคนครับ หลังจากนี้หากมีการอัปเดตเวอร์ชั่นใหม่ที่สมบูรณ์ขึ้นหรือมีระบบอะไรที่เพิ่มมาอีก ผมจะส่งไฟล์ใหม่ให้ทุกคนใช้ฟรีตลอดไป ผมถือว่าเราลุยไปด้วยกัน ผมดูแลเต็มที่แน่นอนครับ 🫡</div>
+              <div class="slide-desc">   ผมตั้งใจทำระบบนี้ให้ดีที่สุด และจะคอยปรับปรุงรายละเอียดเล็กๆ น้อยๆ ให้ใช้งานง่ายขึ้นอยู่เสมอตามตามคำแนะนำของทุกคนครับ หลังจากนี้หากมีการอัปเดตเวอร์ชั่นใหม่ที่สมบูรณ์ขึ้นหรือมีระบบอะไรที่เพิ่มมาอีก ผมจะส่งไฟล์ใหม่ให้ทุกคนใช้ฟรีตลอดไป ผมถือว่าเราลุยไปด้วยกัน ผมดูแลเต็มที่แน่นอนครับ 🫡</div>
             </div>
           </div>
 
@@ -1428,9 +1429,9 @@
     <div class="summary-col">
 
     <!-- ── กล่องสรุป ── -->
-    <div class="summary-box" style="margin-top:0; height:100%; box-sizing:border-box;">
+    <div class="summary-box" style="margin-top:0; box-sizing:border-box;">
       <p style="font-size:1.35rem;font-weight:800;color:#202124;text-align:center;margin-bottom:6px;">สรุป</p>
-      <p style="font-size:1.35rem;font-weight:400;color:#ea4335;text-align:center;margin-bottom:6px;line-height:1.5;">รวมมูลค่าทั้งหมด 6 อย่างที่จะได้รับคือ 1,490.-</p>
+      <p style="font-size:1.35rem;font-weight:400;color:#ea4335;text-align:center;margin-bottom:6px;line-height:1.5;">รวมมูลค่าทั้งหมด 7 อย่างที่จะได้รับคือ 1,490.-</p>
       <p style="font-size:1.35rem;font-weight:800;color:#2e7d32;text-align:center;margin-bottom:14px;line-height:1.6;">แต่ตอนนี้มีราคาพิเศษจาก [ 1,490.- ] ลดเหลือแค่ [ 299.- ] สำหรับ 10 คนแรก ที่มาจากคลิปล่าสุดเท่านั้นอยู่นะครับ🥰</p>
 
       <p class="summary-body">หลังจากครบ 10 คน ราคาจะกลับเป็นราคาเดิม [1,490.-] ทันที ( ตอนนี้ 5 คนแล้วครับ 🥺 )</p>
@@ -1439,18 +1440,40 @@
 
       <p class="summary-body">( ในอนาคตที่ Planner นี้มีสิ่งใหม่ๆ เพิ่ม ราคาจะเพิ่มขึ้นเรื่อยๆ เช่นกันครับ แปลว่าเห็นราคาในตอนนี้เป็นเท่าไหร่ ก็ถือเป็นราคาที่ดีและคุ้มที่สุดของตอนนี้แล้วครับ🥰 )</p>
 
-      <p class="summary-body">ถ้าไม่อยากพลาดราคาที่คุ้มที่สุด...คลิกที่ปุ่มสีแดง <a class="summary-link" href="checkout.html?mode=50first" data-checkout-url style="font-weight:700;">&gt; คลิกเพื่อรับสิทธิ์ 299.- (เหลืออีกแค่ 5 ที่สุดท้าย) &lt;</a> ได้เลยนะครับ☺️</p>
+      <!-- ซ่อน/แสดง: เปลี่ยน display:none ↔ block ที่บรรทัดนี้ -->
+      <p class="summary-body" style="display:none;">ถ้าไม่อยากพลาดราคาที่คุ้มที่สุด...คลิกที่ปุ่มสีแดง <a class="summary-link" href="checkout.html?mode=50first" data-checkout-url style="font-weight:700;">&gt; คลิกเพื่อรับสิทธิ์ 299.- (เหลืออีกแค่ 5 ที่สุดท้าย) &lt;</a> ได้เลยนะครับ☺️</p>
 
       <p class="summary-body" style="font-size:0.82rem;font-weight:300;color:#202124;">ผมใส่ทุกช่องทางชำระเงินที่สะดวกที่สุดให้แล้วครับ ถ้าชำระเงินเสร็จแล้ว ผมจะส่งไฟล์ Planner และทั้งหมดที่บอกไป ให้ทาง Email ทันทีเลยครับ🫡</p>
 
       <p class="summary-body" style="font-size:0.82rem;font-weight:300;color:#202124;margin-bottom:18px;">ถ้าลังเลหรือติดปัญหาตรงไหนเพิ่มเติม สามารถถามผมทางแชทเพจได้เลยนะครับ ยินดีช่วยมากๆ ครับ🥰</p>
     </div>
 
+    <!-- ── FAQ Buttons — เรียงลำดับที่นี่ได้เลย ── -->
+    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;">
+      <button class="faq-btn" data-title="❓ ได้อะไรบ้างครับ?" data-body="ได้ครบ 7 อย่างเลยครับ ทั้ง Planner วางแผนเป้าหมาย / Habit Tracker ติดตามวินัย / Money Tracker บริหารเงิน / แดชบอร์ดสรุปรายปี / วิดีโอสอนใช้งาน / อัปเดตฟรีตลอดชีพ / และผมพร้อมดูแลส่วนตัวถ้าใช้แล้วติดปัญหาครับ 🙏" style="background:#f1f3f4;border:1px solid #e0e0e0;border-radius:20px;padding:8px 18px;font-family:inherit;font-size:0.88rem;font-weight:600;color:#202124;cursor:pointer;" onmouseover="this.style.background='#e8eaed'" onmouseout="this.style.background='#f1f3f4'">❓ ได้อะไรบ้างครับ?</button>
+      <button class="faq-btn" data-title="🤔 ใช้ยากไหมครับ กลัวใช้ไม่เป็น?" data-body="ไม่ยากเลยครับ ผมเซ็ตสูตรทุกอย่างไว้ให้หมดแล้ว แค่กรอกข้อมูลและติ๊ก กราฟและตัวเลขจะรันของมันเองเลยครับ และมีวิดีโอสอนใช้งานสั้นๆ 6 นาทีแนบไปให้ด้วย เปิดดูครั้งเดียวพร้อมใช้ได้เลยครับ 🥰" style="background:#f1f3f4;border:1px solid #e0e0e0;border-radius:20px;padding:8px 18px;font-family:inherit;font-size:0.88rem;font-weight:600;color:#202124;cursor:pointer;" onmouseover="this.style.background='#e8eaed'" onmouseout="this.style.background='#f1f3f4'">🤔 ใช้ยากไหมครับ?</button>
+      <button class="faq-btn" data-title="📱 ใช้บนมือถือ , ไอแพดได้ไหมครับ?" data-body="สารภาพตรงๆ เลยนะครับ ถ้าคิดว่าจะใช้ผ่านมือถือเป็นหลัก อาจจะใช้งานยากนิดนึงนะครับ เพราะ Google เองออกแบบแอป Sheets มาสำหรับคอมเป็นหลัก แต่ระบบทุกอย่างก็ใช้ได้เหมือนกันหมดเลยครับ เพียงแต่บนมือถือต้องซูมและใช้นิ้วเลื่อนไปมาแทนการคลิกและเลื่อนด้วยเมาส์เท่านั้นเองครับ&#10;แต่ถ้ามีคอมอยู่แล้ว และแค่อยากหยิบมือถือมาติ๊กระหว่างวัน อันนี้ทำได้สบายๆ เลยครับ และเพราะมันเป็น Google Sheets เดียวกัน ข้อมูลทุกอย่างที่ติ๊กผ่านมือถือก็จะอัปเดตไปบนคอมให้ทันทีเลยครับ 🥰" style="background:#f1f3f4;border:1px solid #e0e0e0;border-radius:20px;padding:8px 18px;font-family:inherit;font-size:0.88rem;font-weight:600;color:#202124;cursor:pointer;" onmouseover="this.style.background='#e8eaed'" onmouseout="this.style.background='#f1f3f4'">📱 ใช้บนมือถือได้ไหมครับ?</button>
+      <button class="faq-btn" data-title="💭 อยากได้นะ แต่กลัวว่าตัวเองจะทำไม่ได้จริงๆ" data-body="ผมเข้าใจความรู้สึกนี้มากเลยครับ เพราะผมเองก็เคยเป็นแบบนั้น ที่ลองทุกอย่างแล้วก็ทิ้งกลางคันซ้ำๆ จนรู้สึกว่าตัวเองแก้ไม่ได้แล้ว&#10;.&#10;แต่สิ่งที่ผมค้นพบคือ มันไม่ได้เป็นเพราะนิสัยหรือความขี้เกียจครับ คนเราจะอยากทำอะไรต่อเนื่องได้ก็ต่อเมื่อเห็นว่าตัวเองก้าวหน้าขึ้นจริงๆ เหมือนตอนที่เราชั่งน้ำหนักแล้วเห็นตัวเลขลดลง เราก็อยากออกกำลังกายต่อ แต่ถ้าไม่มีตัวเลขให้ดูเลย เราก็ไม่รู้ว่าที่ทำไปมันได้ผลมั้ย แต่พอชีวิตมีระบบที่คอยบอกว่าเราขยับไปได้แค่ไหนแล้ว ความรู้สึกอยากทำต่อมันก็จะเกิดขึ้นเองครับ 🙏" style="background:#f1f3f4;border:1px solid #e0e0e0;border-radius:20px;padding:8px 18px;font-family:inherit;font-size:0.88rem;font-weight:600;color:#202124;cursor:pointer;" onmouseover="this.style.background='#e8eaed'" onmouseout="this.style.background='#f1f3f4'">💭 อยากได้ แต่กลัวทำไม่ได้จริงๆ</button>
+      <button class="faq-btn" data-title="😟 กลัวซื้อแล้วไม่ได้ใช้จริง ทำยังไงดี?" data-body="เข้าใจมากเลยครับ ผมเองก็เคยเป็นแบบนั้นเองกับหลายอย่างที่ซื้อมา แต่ระบบนี้ใช้เวลาแค่วันละ 1-2 นาทีก่อนนอนครับ ในการวางแผนสิ่งต่างๆ และแค่เปิดมาติ๊กสิ่งที่ทำได้วันนี้ แค่นั้นเลย และถ้าซื้อไปแล้วยังไม่รู้จะเริ่มยังไง ทักผมมาได้เลยครับ ผมดูแลทุกคนเองครับ 🥰" style="background:#f1f3f4;border:1px solid #e0e0e0;border-radius:20px;padding:8px 18px;font-family:inherit;font-size:0.88rem;font-weight:600;color:#202124;cursor:pointer;" onmouseover="this.style.background='#e8eaed'" onmouseout="this.style.background='#f1f3f4'">😟 กลัวซื้อแล้วไม่ได้ใช้จริง?</button>
+      <button class="faq-btn" data-title="📦 ซื้อแล้วได้รับของยังไง นานแค่ไหน?" data-body="หลังจากโอนเงินและกดส่งข้อมูลในหน้าชำระเงินแล้ว ระบบอัตโนมัติของผมจะส่ง Planner / วิดีโอสอนใช้งาน / และทุกอย่างที่บอกไปให้ทาง Email ทันทีภายใน 10 วิเลยครับ แต่ถ้าช้ากว่านี้แล้วยังไม่ได้รับ สามารถส่งสลิปมาทางแชท แล้วเดี๋ยวผมจะรีบจัดการส่งให้อีกครั้งทันทีเลยครับ 🫡" style="background:#f1f3f4;border:1px solid #e0e0e0;border-radius:20px;padding:8px 18px;font-family:inherit;font-size:0.88rem;font-weight:600;color:#202124;cursor:pointer;" onmouseover="this.style.background='#e8eaed'" onmouseout="this.style.background='#f1f3f4'">📦 ซื้อแล้วได้รับของยังไง?</button>
     </div><!-- end 40% col -->
     </div><!-- end flex row -->
+    </div>
+
+    <!-- Single FAQ Modal (ใช้ร่วมกัน) -->
+    <div id="faq-modal" onclick="if(event.target===this)this.style.display='none'" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:9999;align-items:center;justify-content:center;padding:20px;">
+      <div style="background:#fff;border-radius:16px;padding:28px 24px 24px;max-width:520px;width:100%;max-height:80vh;overflow-y:auto;position:relative;box-shadow:0 8px 32px rgba(0,0,0,0.2);">
+        <button onclick="document.getElementById('faq-modal').style.display='none'" style="position:absolute;top:14px;right:16px;background:none;border:none;font-size:1.3rem;cursor:pointer;color:#5f6368;line-height:1;">✕</button>
+        <p id="faq-modal-title" style="font-size:1rem;font-weight:700;color:#202124;margin-bottom:14px;"></p>
+        <p id="faq-modal-body" style="font-size:0.92rem;color:#202124;line-height:1.8;white-space:pre-wrap;"></p>
+      </div>
+    </div>
+
+
+
 
     <!-- ── เรื่องราวที่ทำให้มาสร้างระบบนี้ ── -->
-    <div id="story-section" class="collapse-section" style="margin-top: 20px; scroll-margin-top: 80px;">
+    <div id="story-section" class="collapse-section" style="margin-top: 12px; scroll-margin-top: 80px;">
       <button class="collapse-toggle" id="storyToggle">
         <span style="display:flex;flex-direction:column;gap:3px;">
           <span>เรื่องราวที่ทำให้ผมมาสร้างและใช้งาน Planner นี้ จนเปลี่ยนแปลงตัวเองได้จริง 📒📝</span>
@@ -1468,8 +1491,6 @@
    เพราะการแค่ทำ แต่ไม่รู้ว่าตัวเองก้าวไปได้ไกลแค่ไหนแล้ว มันทำให้ผมรู้สึกเหมือนย่ำอยู่กับที่ไม่ไปไหนและเหนื่อยฟรี ผมเลยทุ่มเวลาเรียนรู้เขียนสตร Excel ที่โคตรจะปวดหัวเลยครับ555 มันสุดๆ จริงๆ ผมเสียเวลาในชีวิตไปเกือบ 1 ปีในการสร้าง Plnner ตัวนี้ขึ้นมาใช้งานเอง เพื่อคอยใช้วางแผน, ติดตามเป้าหมายและวินัยของผม
 .
    แต่ผลลัพธ์มันก็คุ้มค่ามากๆ จริงๆ ครับ พอผมได้ลองเริ่มใช้ จากที่ผมเคยรู้สึกว่ายุ่งทั้งวันและต้องรีบไปหมด ผมกลับมีชีวิตที่เริ่มมีแบบแผน ได้เวลาในแต่ละวันกลับมาเยอะมาก ผมได้เห็นว่าทุกวันผมเข้าใกล้สิ่งเป้าหมายมากขึ้นแค่ไหนแล้ว แต่ละวันผมมีวินัยได้จริงมั้ย สิ่งเหล่านี้มันสร้างความรู้สึกดีและความภูมิใจในตัวเองข้างในลึกๆ จนผมสนุกกับมัน ต่างกับเมื่อก่อนมากๆ ที่ผมแค่ทำมันทุกวัน แต่ไม่มีแบบแผน ไม่เห็นความก้าวหน้า แต่ตอนนี้ผมสามารถทำสิ่งเหล่านี้ได้ทุกวันจริงๆ ครับ เพราะผมมีสิ่งที่คอยบอกผมว่า ยิ่งผมไม่หยุด ผมก็ยิ่งเข้าใกล้เป้าหมายได้ไวขึ้นเรื่อยๆ🫡
-.
-   ลองนึกภาพว่าเป็นคุณสิครับ ถ้าคุณได้เห็นว่าตัวเองเข้าใกล้สิ่งที่ต้องการมากขึ้นทุกครั้งที่ลงมือทำในทุกวัน และคุณสนุกกับมันด้วย คุณจะอยากหยุดมั้ยครับ ผมเดาว่าคุณก็คงตอบว่าไม่ยากหยุดแน่ๆ และคุณคงจะยิ่งอยากไปให้ถึงมันให้ได้ไวที่สุดใช่มั้ยครับ
 .
    และนี่แหละครับ คือจุดเริ่มต้นของการมีวินัยและไฟที่แท้จริง จากประสบการณ์ตรงและเรื่องราวของผมเองครับ
 .
@@ -1491,7 +1512,7 @@
 .
 ผมเลยกัดฟันลองตัดสินใจมอบมันให้แค่กับคนที่พร้อมลงทุนกับมันจริงๆ...มันกลายเป็นว่าทุกคนนั้นใช้งานมันจริงๆ อย่างเต็มที่ ลึกๆ คงเป็นเพราะเวลาที่เราลงทุนกับอะไรสักอย่าง เราจะรู้สึกว่ามันมีคุณค่าและต้องใช้ม้นให้คุ้มค่าที่สุด และนั่นคือจุดเริ่มต้นของการลุยกับเป้าหมายและสร้างวินัยได้จริงๆ ครับ
 .
-เพราะเหตุผลนี้ ผมเลยตั้งใจมอบโบนัสอีกหลายอย่างเพิ่มให้กับคนที่ไว้ใจสนับสนุนผม เพื่อช่วยให้ทุกคนที่รับของจากผมไปแล้วนั้น ได้รับสิ่งที่ดีและคุ้มค่าที่สุด + สามารถใช้งานมันได้เต็มที่จริงๆ เพราะถ้าเสียเงินลงทุนไปแล้ว แต่มันช่วยอะไรไม่ได้เลย ผมก็ไม่สบายใจครับ 🥰🙏
+เพราะเหตุผลนี้ ผมเลยตั้งใจใส่ทุกอย่างที่จำเป็นไว้ให้ครบตั้งแต่แรก เพื่อให้ทุกคนที่ไว้ใจสนับสนุนผมนั้น ได้รับสิ่งที่ดีและคุ้มค่าที่สุด และสามารถใช้งานมันได้เต็มที่จริงๆ เพราะถ้าเสียเงินลงทุนไปแล้ว แต่มันช่วยอะไรไม่ได้เลย ผมก็ไม่สบายใจครับ 🫡🙏
  </div>
       </div>
     </div>
@@ -1755,6 +1776,38 @@ localStorage.setItem('ACTIVE_PROMO', ACTIVE_PROMO);
   });
 
   applyPriceConfig();
+
+  // FAQ single modal
+  document.querySelectorAll('.faq-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.getElementById('faq-modal-title').textContent = btn.dataset.title;
+      document.getElementById('faq-modal-body').textContent = btn.dataset.body;
+      document.getElementById('faq-modal').style.display = 'flex';
+    });
+  });
+
+  // ให้ summary-box สูงเท่า carousel-col ด้วย ResizeObserver
+  (function() {
+    var cc = document.querySelector('.carousel-col');
+    var box = document.querySelector('.summary-col .summary-box');
+    if (!cc || !box) return;
+
+    function sync() {
+      var h = cc.getBoundingClientRect().height;
+      if (h > 50) {
+        box.style.maxHeight = Math.round(h) + 'px';
+        box.style.overflowY = 'auto';
+      }
+    }
+
+    if (window.ResizeObserver) {
+      new ResizeObserver(sync).observe(cc);
+    }
+    window.addEventListener('resize', sync);
+    window.addEventListener('load', sync);
+    setTimeout(sync, 200);
+    setTimeout(sync, 800);
+  })();
 
 </script>
 </body>
