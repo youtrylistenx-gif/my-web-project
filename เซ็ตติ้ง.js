@@ -12,7 +12,7 @@
    เปลี่ยนค่าบรรทัดเดียว ราคาและรูปแบบทุกหน้าจะเปลี่ยนตาม
 
    'flash'    →  โปรแฟลชเซล   ราคา ฿399.-   (ไม่จำกัดจำนวน)
-   '50first'  →  โปร 50 คนแรก ราคา ฿299.-   (จำกัด 50 สิทธิ์) */
+   '50first'  →  โปร 20 คนแรก ราคา ฿299.-   (จำกัด 20 สิทธิ์) */
 
 var ACTIVE_PROMO = '50first';
 
@@ -29,8 +29,8 @@ var PROMOS = {
   '50first': {
     priceNew:    299,
     priceOld:    1490,
-    slotsTotal:  10,
-    slotsUsed:   5,
+    slotsTotal:  20,
+    slotsUsed:   15,
     checkoutUrl: 'checkout.html?mode=50first',
     isFlash:     false,
   },

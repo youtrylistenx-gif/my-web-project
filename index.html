@@ -13,9 +13,16 @@
     body {
       font-family: 'Prompt', sans-serif;
       font-size: 16px;
+      line-height: 1.45;
       color: #202124;
       background: #fff;
       min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      font-feature-settings: "kern" 1;
+      -webkit-text-stroke: 0.2px;
+      letter-spacing: 0.01em;
     }
 
     /* ── LIVE USERS POPUP (TOP CENTER) ── */
@@ -216,7 +223,7 @@
           <div class="timer" id="timer1">Flash Sale: กำลังโหลด...</div>
           <div id="idx-slots-wrap">
             <div class="idx-slots-label">
-              ราคาพิเศษนี้สำหรับ <strong id="idx-slots-total">10 คน</strong>แรกเท่านั้น — รับสิทธิ์แล้ว <span id="idx-slots-count">5/10</span> คน
+              ราคาพิเศษนี้สำหรับ <strong id="idx-slots-total">20 คน</strong>แรกเท่านั้น — รับสิทธิ์แล้ว <span id="idx-slots-count">15/20</span> คน
               <span class="idx-slots-badge" id="idx-slots-badge">🔥 เหลืออีกแค่ 5 สิทธิ์สุดท้าย!</span>
             </div>
             <div class="idx-slots-bar">
